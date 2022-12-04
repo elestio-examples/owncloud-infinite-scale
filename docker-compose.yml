@@ -58,3 +58,19 @@ services:
       retries: 5
     volumes:
       - ./redis:/data
+
+  collabora:
+    image: collabora/code:latest
+    cap_add: 
+        - MKNOD
+    environment: 
+        - domain=${DOMAIN}
+        - username=root
+        - password=${ADMIN_PASSWORD}
+        - 'extra_params=--o:ssl.enable=false --o:ssl.termination=true--restart'
+        - DONT_GEN_SSL_CERT=1
+    ports:
+        - 172.17.0.1:21902:9980
+    restart: always
+    volumes:
+        - "/etc/localtime:/etc/localtime:ro"
