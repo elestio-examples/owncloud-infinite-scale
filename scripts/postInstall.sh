@@ -8,3 +8,7 @@ sed -i 's@listen 21905 ssl http2;@listen 21905 ssl http2;\nlocation ^~ /browser 
 
 
 docker exec elestio-nginx nginx -s reload;
+
+
+    sed -i "s|'installed' => true,|'installed' => true,\n  'mail_from_address' => '"$MAIL_FROM_ADDRESS"',\n  'mail_smtpmode' => 'smtp',\n  'mail_sendmailmode' => 'smtp',\n  'mail_domain' => '"$MAIL_DOMAIN"',\n  'mail_smtpport' => '"$EMAIL_PORT"',\n  'mail_smtphost' => '"$EMAIL_HOST"',|g" ./config/config.php
+
