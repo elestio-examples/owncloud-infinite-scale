@@ -18,6 +18,8 @@ ports:
 environments:
   - key: "DOMAIN"
     value: "[CI_CD_DOMAIN]"
+  - key: "OWNCLOUD_TRUSTED_DOMAINS"
+    value: "[CI_CD_DOMAIN]"
   - key: "ADMIN_USERNAME"
     value: "root"
   - key: "ADMIN_PASSWORD"

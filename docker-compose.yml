@@ -11,7 +11,7 @@ services:
       - redis
     environment:
       - OWNCLOUD_DOMAIN=${DOMAIN}
-      - OWNCLOUD_TRUSTED_DOMAINS=${DOMAIN}
+      - OWNCLOUD_TRUSTED_DOMAINS=${OWNCLOUD_TRUSTED_DOMAINS}
       - OWNCLOUD_DB_TYPE=mysql
       - OWNCLOUD_DB_NAME=owncloud
       - OWNCLOUD_DB_USERNAME=owncloud
