@@ -41,7 +41,7 @@ config:
   buildDir: "/"
   runCommand: "docker-compose up -d"
   icon: ""
-  screenshot: "jenkins.jpg"
+  screenshot: "owncloud.png"
 lifeCycleConfig:
   preInstallCommand: "./scripts/preInstall.sh"
   postInstallCommand: "./scripts/postInstall.sh"
@@ -51,6 +51,6 @@ lifeCycleConfig:
   postRestoreCommand: "./scripts/postRestore.sh"
 webUI:
   - url: "https://[CI_CD_DOMAIN]"
-    label: "Jenkins Admin"
+    label: "Owncloud Admin"
     login: "root"
     password: "[ADMIN_PASSWORD]"

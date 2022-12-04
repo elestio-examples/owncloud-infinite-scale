@@ -1,36 +1,57 @@
-# Jenkins CI/CD pipeline
+# Owncloud CI/CD pipeline
 
+<a href="https://dash.elest.io/deploy?source=cicd&social=dockerCompose&url=https://github.com/elestio-examples/owncloud"><img src="deploy-on-elestio.png" alt="Deploy on Elest.io" width="180px" /></a>
 
-<a href="https://dash.elest.io/deploy?source=cicd&social=dockerCompose&url=https://github.com/elestio-examples/jenkins"><img src="deploy-on-elestio.png" alt="Deploy on Elest.io" width="180px" /></a>
+Deploy Owncloud server with CI/CD on Elestio
 
-Deploy Jenkins server with CI/CD on Elestio
-
-<img src="jenkins.jpg" style='width: 100%;'/>
+<img src="owncloud.png" style='width: 100%;'/>
 <br/>
 <br/>
 
 # Once deployed ...
 
-You can can open Jenkins UI here:
+You can can open Owncloud UI here:
 
     URL: https://[CI_CD_DOMAIN]
-
-You will have to complete the initial setup and you will require the initial password. 
-
-To find the initial password open a terminal from your pipeline dashboard and type:
-
-    docker-compose exec jenkins cat /var/jenkins_home/secrets/initialAdminPassword
-
-Copy the password displayed (Eg: fcdd2545d3f8418c82f6280034440729)
-
-Then complete the web setup here: https://[CI_CD_DOMAIN]
-
-It's recommended to install the default plugins when requested in the setup. 
-
-You will also be asked to create the first admin account, you can use those credentials when creating your admin account
-
     Login: root
     password: [ADMIN_PASSWORD]
 
-If you wish to get email notifications about builds status, you should configure SMTP settings through WEB UI, follow to the "Manage Jenkins/Configure System" menu Item. Find there "E-mail Notification" section and fill "SMTP server" field with 172.17.0.1, port 25 without TLS, and set the email FROM address to [DOMAIN]@vm.elestio.app. Alternatively you can setup any third party SMTP service.
+# COLLABORA
 
+If you want to use Collabora, click on Settings at the top left, and choose Market.
+In the new window, find Collabora and install it.
+
+<img src="./steps/step-01.png" style='width: 600px; max-width:100%;'/>
+<img src="./steps/step-02.png" style='width: 600px; max-width:100%;'/>
+
+Once installed, click on your nickname at the top right, and click on Settings.
+On the left side, go to the Admin submenu and click on Additional.
+In the Collabora Online Server field, enter this information:
+https://[DOMAIN]:21905
+Click Apply.
+
+<img src="./steps/step-03.png" style='width: 600px; max-width:100%;'/>
+<img src="./steps/step-04.png" style='width: 600px; max-width:100%;'/>
+<img src="./steps/step-05.png" style='width: 600px; max-width:100%;'/>
+
+# TRUSTED DOMAINS
+
+If you want to use a custom domain, go to your Pipeline, then click on the Tools tab, then choose VS Code.
+
+Once VS Code is opened, open the .env file, then change the values of DOMAIN and OWNCLOUD_TRUSTED_DOMAINS to your domain.
+
+<img src="./steps/step-06.png" style='width: 600px; max-width:100%;'/>
+<img src="./steps/step-07.png" style='width: 600px; max-width:100%;'/>
+
+Click on the burger menu at the top left, then choose Terminal>New Terminal.
+
+In the window that just opened, type:
+
+    docker-compose down
+    docker-compose up -d
+
+<img src="./steps/step-08.png" style='width: 600px; max-width:100%;'/>
+
+Close the window.
+
+From this point, you will only be able to use Collabora with this domain.
