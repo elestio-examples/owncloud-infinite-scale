@@ -21,7 +21,8 @@ You can can open Owncloud UI here:
 If you want to use Collabora, click on Settings at the top left, and choose Market.
 In the new window, find Collabora and install it.
 
-<img src="./steps/step-01.png" style='width: 600px; max-width:100%;'/>
+<img src="./steps/step-01.png" style='width: 200px; max-width:100%;'/>
+
 <img src="./steps/step-02.png" style='width: 600px; max-width:100%;'/>
 
 Once installed, click on your nickname at the top right, and click on Settings.
@@ -30,8 +31,10 @@ In the Collabora Online Server field, enter this information:
 https://[DOMAIN]:21905
 Click Apply.
 
-<img src="./steps/step-03.png" style='width: 600px; max-width:100%;'/>
-<img src="./steps/step-04.png" style='width: 600px; max-width:100%;'/>
+<img src="./steps/step-03.png" style='width: 200px; max-width:100%;'/>
+
+<img src="./steps/step-04.png" style='width: 300px; max-width:100%;'/>
+
 <img src="./steps/step-05.png" style='width: 600px; max-width:100%;'/>
 
 # TRUSTED DOMAINS
