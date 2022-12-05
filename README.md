@@ -2,7 +2,7 @@
 
 <a href="https://dash.elest.io/deploy?source=cicd&social=dockerCompose&url=https://github.com/elestio-examples/owncloud"><img src="deploy-on-elestio.png" alt="Deploy on Elest.io" width="180px" /></a>
 
-Deploy Owncloud server with CI/CD on Elestio
+Deploy Owncloud Infinite Scale server with CI/CD on Elestio
 
 <img src="owncloud.png" style='width: 100%;'/>
 <br/>
