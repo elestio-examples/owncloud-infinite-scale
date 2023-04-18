@@ -10,7 +10,7 @@ Deploy Owncloud Infinite Scale server with CI/CD on Elestio
 
 # Once deployed ...
 
-You can can open Owncloud UI here:
+You can open Owncloud UI here:
 
     URL: https://[CI_CD_DOMAIN]
     Login: root
